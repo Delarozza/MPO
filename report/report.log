@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.12)  2 OCT 2026 23:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.12)  3 OCT 2026 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,23 +586,19 @@ Overfull \hbox (46.05392pt too wide) in paragraph at lines 120--133
  [][] 
  []
 
-[3]
-Overfull \hbox (74.09117pt too wide) in paragraph at lines 151--170
- [][] 
- []
-
+[3] (../results/latex_table_body.tex)
 <../results/figures/all_functions_grid.png, id=103, 1156.32pt x 1011.78pt>
 File: ../results/figures/all_functions_grid.png Graphic file (type png)
 <use ../results/figures/all_functions_grid.png>
 Package pdftex.def Info: ../results/figures/all_functions_grid.png  used on inp
-ut line 174.
+ut line 164.
 (pdftex.def)             Requested size: 386.96027pt x 338.58173pt.
-[4]
+ [4]
 <../results/figures/error_boxplots.png, id=115, 1011.78pt x 433.62pt>
 File: ../results/figures/error_boxplots.png Graphic file (type png)
 <use ../results/figures/error_boxplots.png>
 Package pdftex.def Info: ../results/figures/error_boxplots.png  used on input l
-ine 181.
+ine 171.
 (pdftex.def)             Requested size: 386.96027pt x 165.84256pt.
  [5 <../results/figures/all_functions_grid.png> <../results/figures/error_boxpl
 ots.png>] [6] [7] (./report.aux)
@@ -610,13 +606,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 492E577C3D9958B185D5D5F13B07BD7C;3478.
  ) 
 Here is how much of TeX's memory you used:
- 14860 strings out of 480247
- 238862 string characters out of 5896105
- 592462 words of memory out of 5000000
- 32409 multiletter control sequences out of 15000+600000
+ 14866 strings out of 480247
+ 239025 string characters out of 5896105
+ 593462 words of memory out of 5000000
+ 32411 multiletter control sequences out of 15000+600000
  485700 words of font info for 149 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,10n,63p,1062b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,63p,1062b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -636,7 +632,7 @@ pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm10
 95.pfb>
-Output written on report.pdf (7 pages, 987979 bytes).
+Output written on report.pdf (7 pages, 988026 bytes).
 PDF statistics:
  238 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams

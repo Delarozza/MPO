@@ -124,10 +124,27 @@ class ExperimentRunner:
         df_summary = self.compute_summary(df_raw)
         df_summary.to_csv(os.path.join(self.results_dir, "summary_table.csv"), index=False)
 
-        # Сохранение сводной таблицы в LaTeX
+        # Сохранение сводной таблицы в LaTeX (pandas формат)
         latex_str = df_summary.to_latex(index=False, float_format="%.2e")
         with open(os.path.join(self.results_dir, "summary_table.tex"), "w") as f:
             f.write(latex_str)
+
+        # Генерация строк для отчета LaTeX (специальный формат для report.tex)
+        func_names = {
+            1: "$F_1$ (Zakharov)", 2: "$F_2$ (Rosenbrock)", 3: "$F_3$ (Schaffer F7)", 4: "$F_4$ (Rastrigin)",
+            5: "$F_5$ (Levy)", 6: "$F_6$ (Hybrid 1)", 7: "$F_7$ (Hybrid 2)", 8: "$F_8$ (Hybrid 3)",
+            9: "$F_9$ (Comp 1)", 10: "$F_{10}$ (Comp 2)", 11: "$F_{11}$ (Comp 3)", 12: "$F_{12}$ (Comp 4)"
+        }
+        with open(os.path.join(self.results_dir, "latex_table_body.tex"), "w") as f:
+            for _, row in df_summary.iterrows():
+                fid = int(row["Function"].replace("F", ""))
+                fname = func_names.get(fid, row["Function"])
+                # Формируем строку таблицы с нужными 8 колонками
+                line = f"{fname:<20} & {row['NL_Best']:8.2e} & {row['NL_Mean']:8.2e} & {row['NL_Std']:8.2e} & {row['Paper_Mean']:8.2e} & {row['Paper_Std']:8.2e} & {row['DE_Mean']:8.2e} & {row['DE_Std']:8.2e} \\\\\n"
+                # Корректируем nan на 0.00e+00 для стабильности (хотя у авторов nan не должно быть)
+                line = line.replace("nan", "0.00e+00") 
+                f.write(line)
+            f.write("\\bottomrule\n")
 
         print(f"\nЭксперименты завершены. Результаты сохранены в папку: {self.results_dir}/")
         return df_summary

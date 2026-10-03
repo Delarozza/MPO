@@ -51,7 +51,7 @@ MPO/
 
 3. **Spustenie overovacích testov:**
    ```bash
-   python -m unittest discover tests/
+   python3 -m unittest discover tests/
    ```
 
 ---
@@ -63,24 +63,24 @@ K dispozícii sú predkonfigurované režimy spúšťania:
 * **Rýchly overovací test (cca 3 sekundy):**
   Spustí 1 beh na 2 funkciách na overenie funkčnosti celej pipeline:
   ```bash
-  python run_experiments.py --quick-test
+  python3 run_experiments.py --quick-test
   ```
 
 * **Rýchly kompletný beh (cca 1–2 minúty):**
   Spustí všetkých 12 funkcií CEC 2022 na 5 nezávislých seedoch ($NFE_{max} = 50\,000$):
   ```bash
-  python run_experiments.py --fast-run
+  python3 run_experiments.py --fast-run
   ```
 
 * **Oficiálna plná replikácia (podľa článku):**
   Spustí všetkých 12 funkcií na 30 nezávislých seedoch s plným rozpočtom $NFE_{max} = 200\,000$:
   ```bash
-  python run_experiments.py --full-run
+  python3 run_experiments.py --full-run
   ```
 
 * **Vlastné nastavenie parametrov:**
   ```bash
-  python run_experiments.py --runs 10 --nfe 100000 --dim 10
+  python3 run_experiments.py --runs 10 --nfe 100000 --dim 10
   ```
 
 Všetky výstupné tabuľky sa ukladajú do priečinka `results/` a grafy do `results/figures/`.
